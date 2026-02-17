@@ -1,0 +1,55 @@
+# Make sure you're in the repository folder
+cd ~/GitHub/as7341-tsl2591-logger
+
+# Create the .gitignore file
+nano .gitignore
+```
+
+This will open the nano text editor. Copy and paste this content:
+```
+# Arduino build files
+*.hex
+*.eep
+*.elf
+*.o
+*.a
+*.so
+*.dylib
+build/
+*.build/
+*.ino.globals.h
+*.ino.cpp
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+.ipynb_checkpoints/
+
+# Data files (optional - uncomment if you don't want to track CSV/TXT data logs)
+# *.csv
+# *.txt
+# *.log
+
+# Mac system files
+.DS_Store
+._*
+
+# Windows system files
+Thumbs.db
+desktop.ini
+
+# Backup files
+*~
+*.bak
+*.tmp
+*.swp
+
+
