@@ -15,7 +15,7 @@ This system is a multi-sensor outdoor spectral and environmental data logger dep
 
 ### Files
 
-- **`complete_spectral_uv_logger.ino`** — Arduino sketch for the nRF52840 Feather. Reads all four sensors, timestamps each reading via DS3231 RTC, and logs to CSV on SD card.
+- **`complete_spectral_uv_logger.ino`** — Arduino sketch for the RP2040 Adalogger Feather. Reads all four sensors, timestamps each reading via DS3231 RTC, and logs to CSV on SD card.
 - **`visualization/spectral_plotter_complete_with_uv.py`** — Python script for plotting logged CSV data. Generates a 4-panel figure showing AS7341 visible channels, AS7263 NIR channels, TSL2591 lux, and LTR390 UV index, with night shading calculated from Denver sunrise/sunset times.
 
 ### Dependencies
