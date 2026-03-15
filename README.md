@@ -1,3 +1,5 @@
+# AS7341 + TSL2591 + AS726x (IR) _ LTR390UV Sensor Logger (full complement of sensors) added to the complete spectral logger Arduino code. Visualization file also updated.
+
 # AS7341 + TSL2591 Sensor Logger
 
 Arduino-based dual sensor data logger combining spectral and lux measurements with timestamp logging.
