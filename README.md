@@ -1,5 +1,39 @@
 # AS7341 + TSL2591 + AS726x (IR) + LTR390UV Sensor Logger (full complement of sensors) added to the complete spectral logger Arduino code. Visualization file also updated.
 
+## Sensor Array
+
+This system is a multi-sensor outdoor spectral and environmental data logger deployed in a east-facing backyard in Denver, Colorado. It runs on an **Adafruit nRF52840 Feather** with a custom 3D-printed weatherproof enclosure and logs data continuously to SD card with RTC timestamping.
+
+### Sensors
+
+| Sensor | Type | Channels | Range |
+|---|---|---|---|
+| **AS7341** | Visible spectral | 10 channels | 415–910 nm |
+| **TSL2591** | Broadband lux | Visible + IR | — |
+| **AS7263** | NIR spectral | 6 channels | 610–860 nm |
+| **LTR390** | UV | UV Index + UVA | 280–430 nm |
+
+### Files
+
+- **`complete_spectral_uv_logger.ino`** — Arduino sketch for the nRF52840 Feather. Reads all four sensors, timestamps each reading via DS3231 RTC, and logs to CSV on SD card.
+- **`visualization/spectral_plotter_complete_with_uv.py`** — Python script for plotting logged CSV data. Generates a 4-panel figure showing AS7341 visible channels, AS7263 NIR channels, TSL2591 lux, and LTR390 UV index, with night shading calculated from Denver sunrise/sunset times.
+
+### Dependencies
+
+**Arduino libraries:**
+- Adafruit AS7341
+- Adafruit TSL2591
+- SparkFun AS726X
+- Adafruit LTR390
+- RTClib
+- SdFat
+
+**Python packages:**
+- pandas
+- matplotlib
+- numpy
+
+
 # AS7341 + TSL2591 Sensor Logger
 
 Arduino-based dual sensor data logger combining spectral and lux measurements with timestamp logging.
